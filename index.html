@@ -18,7 +18,7 @@
   <meta property="og:title" content="Enrico Wendt Seesen – Stadtrat & Kreistag Goslar">
   <meta property="og:description" content="Enrico Wendt kandidiert für den Stadtrat Seesen und den Kreistag Goslar. Themen, Haltung und Kontakt.">
   <meta property="og:url" content="https://enrico-wendt.de/">
-  <meta property="og:image" content="https://enrico-wendt.de/assets/hero.jpg">
+  <meta property="og:image" content="https://enrico-wendt.de/assets/enrico-wendt-seesen.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
@@ -57,14 +57,16 @@
     .menu-button[aria-expanded="true"] .menu-icon::before{top:0;transform:rotate(45deg)}
     .menu-button[aria-expanded="true"] .menu-icon::after{top:0;transform:rotate(-45deg)}
     .spd-logo{width:84px;height:auto}
+    .header-social{display:flex;align-items:center;gap:7px}
+    .social-icon{width:36px;height:36px;display:grid;place-items:center;border:1px solid #c7c7c7;border-radius:50%;background:#fff;color:#181818;text-decoration:none;transition:.18s}
+    .social-icon:hover,.social-icon:focus-visible{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-1px)}
+    .social-icon svg{width:17px;height:17px;fill:currentColor}
 
     .menu-panel{position:fixed;top:86px;right:max(21px,calc((100vw - var(--max))/2));z-index:999;width:min(390px,calc(100vw - 42px));background:#fff;border:1px solid #d0d0d0;box-shadow:0 24px 60px rgba(0,0,0,.18);opacity:0;visibility:hidden;transform:translateY(-12px);transition:.2s}
     .menu-panel.open{opacity:1;visibility:visible;transform:none}
     .menu-panel a{display:block;padding:17px 20px;text-decoration:none;font-weight:800;border-bottom:1px solid #e0e0e0}
     .menu-panel a:hover,.menu-panel a:focus-visible{background:var(--soft);color:var(--red-dark)}
-    .menu-social{display:flex;gap:20px;padding:18px 20px;font-size:.9rem;font-weight:800}
-    .menu-social a{padding:0;border:0;text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px}
-
+    
     main{overflow:hidden}
     .hero{padding:42px 0 0}
     .hero-media{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,430px);min-height:650px;overflow:hidden;background:#f4f4f4;border-bottom:8px solid var(--red)}
@@ -105,19 +107,28 @@
     .theme-copy p:last-child{margin-bottom:0}
     .theme-strong{font-weight:800;border-left:4px solid var(--red);padding-left:14px}
     .villages{font-size:.88rem;color:#555;margin-top:14px!important}
+    .idea-label{display:block;margin:18px 0 7px;color:var(--red-dark);font-size:.73rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
+    .idea-list{margin:0;padding:0;list-style:none;border-top:1px solid #bbb}
+    .idea-list li{position:relative;padding:10px 0 10px 20px;border-bottom:1px solid #d2d2d2;font-weight:700}
+    .idea-list li::before{content:"→";position:absolute;left:0;color:var(--red);font-weight:900}
+    .current-note{margin-top:16px;padding:14px 16px;border-left:4px solid var(--red);background:#fff;font-size:.93rem}
+    .current-note strong{color:var(--red-dark)}
 
     .hundred{background:#fff}
-    .hundred-box{border-top:7px solid var(--red);padding-top:28px;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:start}
+    .hundred-box{border-top:7px solid var(--red);padding-top:28px;display:grid;grid-template-columns:.78fr 1.22fr;gap:60px;align-items:start}
     .hundred h2{font-size:clamp(2.35rem,5vw,4.7rem);font-weight:900;max-width:12ch;margin-bottom:20px}
     .hundred-copy{font-size:1.06rem;max-width:60ch;color:#333}
     .hundred-list{margin:0;padding:0;list-style:none;border-top:1px solid #171717}
-    .hundred-list li{padding:16px 0;border-bottom:1px solid var(--line);font-weight:800}
+    .hundred-list li{padding:16px 0;border-bottom:1px solid var(--line);font-weight:900}
+    .hundred-detail{font-size:1.04rem;color:#333;max-width:63ch}
+    .hundred-detail p{margin:0 0 14px}
 
     .about{background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .about-grid{display:grid;grid-template-columns:minmax(300px,.75fr) 1.25fr;gap:60px;align-items:start}
     .about img{width:100%;height:auto}
     .about h2{font-size:clamp(2.35rem,4.8vw,4.4rem);font-weight:900;max-width:14ch;margin:9px 0 24px}
     .about p{font-size:1.05rem;max-width:65ch;color:#333;margin:0 0 16px}
+    .about-example{margin:22px 0;padding:18px 20px;border-left:5px solid var(--red);background:#fff;font-size:1.08rem!important;font-weight:800;color:#222!important}
     .profile{margin-top:28px;border-top:1px solid #171717}
     .profile-row{display:grid;grid-template-columns:145px 1fr;gap:18px;padding:11px 0;border-bottom:1px solid #cfcfcf}
     .profile-row b{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
@@ -140,7 +151,9 @@
     .sources li{margin:7px 0}
     footer{padding:24px 0;background:#fff;border-top:1px solid #171717;font-size:.84rem}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-links{display:flex;gap:18px}
+    .footer-links{display:flex;align-items:center;gap:16px}
+    .footer-social{display:flex;align-items:center;gap:7px}
+    .footer-social .social-icon{width:34px;height:34px}
     [id]{scroll-margin-top:100px}
     :focus-visible{outline:3px solid #111;outline-offset:4px}
 
@@ -160,7 +173,7 @@
     }
     @media(max-width:560px){
       .wrap{width:min(var(--max),calc(100% - 26px))}
-      .header-inner{min-height:70px;gap:10px}.spd-logo{width:66px}.menu-button{width:42px;height:42px}.brand strong{font-size:1.08rem}.brand span{font-size:.64rem}
+      .header-inner{min-height:70px;gap:8px}.spd-logo{width:62px}.menu-button{width:40px;height:40px}.brand strong{font-size:1.03rem}.brand span{display:none}.header-social{gap:5px}.header-social .social-icon{width:30px;height:30px}.header-social .social-icon svg{width:15px;height:15px}
       .menu-panel{top:78px;right:13px;width:calc(100vw - 26px)}
       .hero-copy{padding:32px 22px 28px}
       h1{font-size:3.6rem}
@@ -189,11 +202,21 @@
         "inLanguage":"de-DE"
       },
       {
+        "@type":"WebPage",
+        "@id":"https://enrico-wendt.de/#webpage",
+        "url":"https://enrico-wendt.de/",
+        "name":"Enrico Wendt Seesen | Stadtrat & Kreistag Goslar – SPD",
+        "isPartOf":{"@id":"https://enrico-wendt.de/#website"},
+        "about":{"@id":"https://enrico-wendt.de/#enrico-wendt"},
+        "primaryImageOfPage":{"@type":"ImageObject","url":"https://enrico-wendt.de/assets/enrico-wendt-seesen.jpg"},
+        "inLanguage":"de-DE"
+      },
+      {
         "@type":"Person",
         "@id":"https://enrico-wendt.de/#enrico-wendt",
         "name":"Enrico Wendt",
         "url":"https://enrico-wendt.de/",
-        "image":"https://enrico-wendt.de/assets/hero.jpg",
+        "image":["https://enrico-wendt.de/assets/enrico-wendt-seesen.jpg","https://enrico-wendt.de/assets/enrico-wendt-seesen-portrait.jpg"],
         "jobTitle":"Sozialpädagoge und Frühförderer",
         "description":"Enrico Wendt kandidiert für den Stadtrat Seesen und den Kreistag Goslar.",
         "affiliation":{"@type":"Organization","name":"Sozialdemokratische Partei Deutschlands (SPD)"},
@@ -213,6 +236,14 @@
       <strong>Enrico Wendt</strong>
       <span>Seesen · Landkreis Goslar</span>
     </a>
+    <div class="header-social" aria-label="Social Media">
+      <a class="social-icon" href="https://www.instagram.com/enricowendt387/" rel="me noreferrer" aria-label="Instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm11 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+      </a>
+      <a class="social-icon" href="https://www.facebook.com/share/1b2mqhSLFA/" rel="me noreferrer" aria-label="Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3.2l.8-4H13V9c0-.7.3-1 1-1Z"/></svg>
+      </a>
+    </div>
     <button class="menu-button" id="menu-button" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu-panel"><span class="menu-icon"></span></button>
     <img class="spd-logo" src="assets/spd-logo.png" alt="SPD" width="810" height="332">
   </div>
@@ -223,7 +254,6 @@
   <a href="#100tage">100 Tage</a>
   <a href="#person">Über mich</a>
   <a href="#kontakt">Kontakt</a>
-  <div class="menu-social"><a href="https://www.instagram.com/enricowendt387/" rel="me noreferrer">Instagram</a><a href="https://www.facebook.com/share/1b2mqhSLFA/" rel="me noreferrer">Facebook</a></div>
 </nav>
 
 <main id="inhalt">
@@ -275,32 +305,67 @@
       </div>
       <div class="theme-list">
         <article class="theme">
-          <h3>Seesen und seine Ortschaften gemeinsam entwickeln.</h3>
+          <h3>Dorfentwicklung: Ideen möglich machen.</h3>
           <div class="theme-copy">
-            <p>Seesen ist mehr als seine Stadtmitte. Auch die Ortschaften brauchen verlässliche Angebote, Investitionen und Treffpunkte. Öffentliche Mittel sollen dort ankommen, wo Menschen sie im Alltag brauchen.</p>
-            <p class="theme-strong">Ich will, dass aus jeder Ortschaft konkrete Anliegen in die Dorfentwicklung einfließen.</p>
+            <p>Die neun Seesener Ortschaften erarbeiten gerade gemeinsam ihren Dorfentwicklungsplan. Ich habe mich beim Startseminar im August über den aktuellen Stand informiert. Jetzt ist der richtige Zeitpunkt, Ideen einzubringen – bevor der Plan feststeht.</p>
+            <p class="theme-strong">Förderwissen darf nicht in Aktenordnern bleiben. Was Stadt und Politik über Fördermöglichkeiten wissen, muss bei Vereinen, Initiativen und privaten Eigentümerinnen und Eigentümern ankommen.</p>
+            <span class="idea-label">Konkrete Ideen</span>
+            <ul class="idea-list">
+              <li>Leerstände wieder nutzen; wo ein Gebäude nicht sinnvoll erhalten werden kann, Rückbau und eine gute Nachnutzung der Fläche mitdenken.</li>
+              <li>Menschen frühzeitig dabei unterstützen, aus einer Dorfidee ein förderfähiges Projekt zu machen.</li>
+            </ul>
+            <div class="current-note"><strong>Aktuell:</strong> In Seesen können Kleinstprojekte bis zum 30. September 2026 eingereicht werden. Je Projekt sind bis zu 2.500&nbsp;Euro Zuschuss möglich. Für solche Kleinstvorhaben sind nach der niedersächsischen Dorfentwicklungsförderung je Dorfregion über die Programmlaufzeit insgesamt bis zu 30.000&nbsp;Euro Zuschuss vorgesehen.</div>
             <p class="villages">Dorfregion: Bilderlahe · Bornhausen · Engelade · Herrhausen · Ildehausen · Kirchberg · Mechtshausen · Münchehof · Rhüden</p>
           </div>
         </article>
+
         <article class="theme">
-          <h3>Mobil bleiben – auch ohne eigenes Auto.</h3>
+          <h3>Mobilität und Älterwerden neu denken.</h3>
           <div class="theme-copy">
-            <p>Gerade für ältere Menschen entscheidet Mobilität darüber, ob Arzttermine, Einkauf, Verwaltung oder soziale Kontakte erreichbar bleiben. flexo und andere Angebote müssen deshalb auch aus Sicht der Ortschaften weitergedacht werden.</p>
-            <p>Der soziale Fahrdienst der SPD-Abteilung Bornhausen zeigt, was Ehrenamt leisten kann. Verlässliche öffentliche Mobilität kann und soll er aber nicht ersetzen.</p>
+            <p>Wer nicht mehr selbst Auto fährt, muss trotzdem zuverlässig zum Arzt, zum Einkauf, zur Verwaltung oder zu sozialen Kontakten kommen. Früher haben sich viele Menschen im Dorf gegenseitig geholfen. Diese Netze werden älter und kleiner. Ehrenamt bleibt wertvoll – aber Daseinsvorsorge darf nicht davon abhängen, dass immer jemand privat fahren kann.</p>
+            <span class="idea-label">Konkrete Ideen</span>
+            <ul class="idea-list">
+              <li>flexo und andere öffentliche Angebote konsequent aus Sicht der Ortschaften und älterer Menschen weiterentwickeln.</li>
+              <li>Ein Dorf-Carsharing mit zentralem Ladepunkt als Pilot prüfen – lieber ein Modell, das funktioniert, als viele halbfertige Ideen.</li>
+            </ul>
           </div>
         </article>
+
         <article class="theme">
-          <h3>Kinder und Familien verlässlich unterstützen.</h3>
+          <h3>Kinder, Familien und soziale Berufe stärken.</h3>
           <div class="theme-copy">
-            <p>Aus meiner Arbeit in der Frühförderung weiß ich, wie viel gute Unterstützung am Anfang eines Lebens bewirken kann. Kleine Einrichtungen und wohnortnahe Angebote sind für Familien wichtig und müssen verlässlich funktionieren.</p>
-            <p>Dazu gehören gute Arbeitsbedingungen für die Beschäftigten und möglichst wenig unnötige Bürokratie.</p>
+            <p>Aus meiner Arbeit in der Frühförderung weiß ich, wie viel gute Unterstützung am Anfang eines Lebens bewirken kann. Was wir heute in Kinder, Betreuung, Ausbildung und gute Fachkräfte investieren, hilft uns auch in Zukunft.</p>
+            <span class="idea-label">Konkrete Ideen</span>
+            <ul class="idea-list">
+              <li>Kleine und wohnortnahe Angebote erhalten und unnötige Bürokratie abbauen, damit Zeit bei den Menschen ankommt.</li>
+              <li>Fort- und Weiterbildung sowie gute Arbeitsbedingungen in sozialen und pflegerischen Berufen als Zukunftsvorsorge verstehen.</li>
+            </ul>
           </div>
         </article>
+
         <article class="theme">
-          <h3>Hitzeschutz, der im Alltag funktioniert.</h3>
+          <h3>Hitzeschutz: wirksam statt nur symbolisch.</h3>
           <div class="theme-copy">
-            <p>Kitas und Einrichtungen, in denen ältere oder pflegebedürftige Menschen betreut werden, müssen auch an sehr heißen Tagen nutzbar bleiben.</p>
-            <p class="theme-strong">Verschattung und Lüftung gehören dazu. Wo das nicht reicht, müssen Klimaanlagen oder andere wirksame Formen der Klimatisierung eine echte Option sein.</p>
+            <p>Kinder sollen lernen können, Beschäftigte sollen arbeiten können und ältere oder pflegebedürftige Menschen müssen geschützt sein. Räume, die sich über Tage stark aufheizen, sind deshalb nicht nur unangenehm – sie werden zum Gesundheits- und Arbeitsproblem.</p>
+            <p class="theme-strong">Sonnenschutz und Lüftung gehören dazu. Wo Räume trotzdem überhitzen, braucht es wirksame technische Kühlung. Klimaanlagen gehören für mich ausdrücklich dazu.</p>
+            <span class="idea-label">Konkrete Ideen</span>
+            <ul class="idea-list">
+              <li>Kitas sowie Einrichtungen für ältere und pflegebedürftige Menschen systematisch auf wirksamen Hitzeschutz prüfen.</li>
+              <li>Bei öffentlichen Gebäuden technische Kühlung dort, wo es sinnvoll ist, mit eigener Photovoltaik und einer energetischen Sanierung zusammendenken.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="theme">
+          <h3>Erneuerbare Energie: Wertschöpfung hier behalten.</h3>
+          <div class="theme-copy">
+            <p>Wenn in Seesen Flächen für Wind- oder Solarenergie genutzt werden, sollte möglichst viel von der wirtschaftlichen Wirkung auch hier bleiben. Erneuerbare Energien können nicht nur Strom liefern, sondern auch Aufträge, Einnahmen, Beteiligung und Arbeitsplätze in der Region schaffen.</p>
+            <p class="theme-strong">Fläche aus unserer Region. Energie aus unserer Region. Dann sollten wir auch prüfen, wie ein möglichst großer Teil der Wertschöpfung in unserer Region bleibt.</p>
+            <span class="idea-label">Konkrete Ideen</span>
+            <ul class="idea-list">
+              <li>Bei neuen größeren Projekten kommunale, genossenschaftliche oder andere regionale Beteiligungsmodelle ernsthaft mitprüfen.</li>
+              <li>Transparent machen, welche Einnahmen, Beteiligungen und Aufträge tatsächlich vor Ort bleiben – und regionalen Betrieben im Rahmen des Vergaberechts eine faire Chance geben.</li>
+            </ul>
           </div>
         </article>
       </div>
@@ -308,28 +373,35 @@
   </section>
 
   <section class="content hundred" id="100tage">
-    <div class="wrap hundred-box">
-      <div>
-        <div class="section-label">Für den Kreistag</div>
-        <h2>Meine ersten 100 Tage.</h2>
-        <p class="hundred-copy">Wenn ich in den Kreistag gewählt werde, möchte ich gezielt Einrichtungen, Vereine und Ortschaften besuchen. Mich interessiert, was im Alltag funktioniert, wo Unterstützung fehlt und welche Themen der Landkreis konkret aufnehmen sollte.</p>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Kreistag</div>
+        <h2>Meine ersten 100 Tage im Kreistag.</h2>
       </div>
-      <ul class="hundred-list" aria-label="Gesprächsschwerpunkte in den ersten 100 Tagen">
-        <li>Kitas & Frühförderung</li>
-        <li>Pflege & soziale Dienste</li>
-        <li>Vereine & Ehrenamt</li>
-        <li>Seesen und seine Ortschaften</li>
-      </ul>
+      <div class="hundred-box">
+        <ul class="hundred-list" aria-label="Gesprächsschwerpunkte in den ersten 100 Tagen">
+          <li>Kitas & Frühförderung</li>
+          <li>Pflege & soziale Dienste</li>
+          <li>Vereine & Ehrenamt</li>
+          <li>Menschen in den Ortschaften</li>
+        </ul>
+        <div class="hundred-detail">
+          <p>Im Kreistag möchte ich nicht nur Akten, Verwaltungen und Unternehmensleitungen kennenlernen. Ich will bewusst dorthin gehen, wo soziale Arbeit, Pflege, Ehrenamt und Dorfleben jeden Tag stattfinden.</p>
+          <p>In den ersten 100 Tagen möchte ich zuhören: Was funktioniert? Wo fehlt Unterstützung? Welche Entscheidungen des Landkreises kommen im Alltag an – und welche nicht?</p>
+          <p><strong>Mein Ziel:</strong> Anliegen aufnehmen, Zuständigkeiten klären und nachvollziehbar machen, welche Themen ich weiterverfolge.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="content about" id="person">
     <div class="wrap about-grid">
-      <div><img src="assets/portrait.jpg" alt="Porträt von Enrico Wendt" width="1638" height="2048" loading="lazy" decoding="async"></div>
+      <div><img src="assets/enrico-wendt-seesen-portrait.jpg" alt="Enrico Wendt aus Seesen – Sozialpädagoge, Frühförderer und Kandidat für Stadtrat und Kreistag" width="1638" height="2048" loading="lazy" decoding="async"></div>
       <div>
         <div class="section-label">Über mich</div>
         <h2>Soziale Erfahrung gehört für mich an den politischen Tisch.</h2>
         <p>Ich lebe in Bornhausen, arbeite als Sozialpädagoge und Frühförderer und bin ehrenamtlich als gesetzlicher Betreuer tätig. Dabei erlebe ich jeden Tag, was gute Unterstützung bewirken kann – und wo Menschen an fehlenden Angeboten, unklaren Zuständigkeiten oder Bürokratie hängen bleiben.</p>
+        <p class="about-example">Ich erlebe zum Beispiel, wie Eltern zwischen Kita, Frühförderung, Ärzten und Kostenträgern vermitteln müssen, obwohl ihre Kraft eigentlich ihrem Kind gehören sollte.</p>
         <p>Diese Erfahrung möchte ich in Stadtrat und Kreistag einbringen. Zuhören gehört dazu. Genauso wichtig ist mir, dass aus Gesprächen nachvollziehbare Arbeit entsteht.</p>
         <div class="profile" aria-label="Kurzprofil">
           <div class="profile-row"><b>Beruf</b><span>Sozialpädagoge und Frühförderer</span></div>
@@ -373,12 +445,15 @@
   <section class="sources" aria-label="Quellen zu aktuellen Angaben">
     <div class="wrap">
       <details>
-        <summary>Quellen zu Wahltermin, Listenplätzen und Dorfentwicklung</summary>
+        <summary>Quellen zu aktuellen Angaben und Themen</summary>
         <ul>
           <li><a href="https://landeswahlleiter.niedersachsen.de/startseite/wahlen/kommunalwahlen/kommunalwahlen/kommunalwahlen_2026/kommunalparlamente-werden-am-13-september-2026-gewahlt-241976.html" rel="noreferrer">Niedersächsischer Landeswahlleiter – Kommunalwahl 2026</a></li>
-          <li><a href="https://www.stadtverwaltung-seesen.de/index.php?FID=3000.37125.1&amp;ModID=7&amp;object=tx%2C3000.5" rel="noreferrer">Stadt Seesen – Dorfregion Seesen</a></li>
+          <li><a href="https://www.stadtverwaltung-seesen.de/Dorfentwicklung/" rel="noreferrer">Stadt Seesen – Dorfentwicklung und Kleinstprojekte</a></li>
+          <li><a href="https://www.ml.niedersachsen.de/startseite/themen/entwicklung_des_landlichen_raums/zile_zuwendungen_zur_integrierten_landlichen_entwicklung/dorfentwicklung-218961.html" rel="noreferrer">Land Niedersachsen – Dorfentwicklung und Förderrahmen</a></li>
           <li><a href="https://spd-seesen.de/stadtratskandidierende" rel="noreferrer">SPD Seesen – Stadtratskandidierende</a></li>
           <li><a href="https://spd-seesen.de/kreistagskandidierende" rel="noreferrer">SPD Seesen – Kreistagskandidierende</a></li>
+          <li><a href="https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Publikationen/Studien/staerkung-der-regionalen-wertschoepfung-durch-erneuerbare-energien.html" rel="noreferrer">Bundeswirtschaftsministerium – Studie zur regionalen Wertschöpfung durch erneuerbare Energien</a></li>
+          <li><a href="https://www.umwelt.niedersachsen.de/startseite/aktuelles/haufig-gestellte-fragen-und-antworten-zu-dem-niedersachsischen-burgerbeteiligungsgesetz-nwindpvbetg-233776.html" rel="noreferrer">Niedersachsen – Beteiligung an Wind- und Freiflächen-PV-Projekten</a></li>
         </ul>
       </details>
     </div>
@@ -388,7 +463,13 @@
 <footer>
   <div class="wrap footer-inner">
     <div>© 2026 Enrico Wendt · Seesen</div>
-    <div class="footer-links"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+    <div class="footer-links">
+      <div class="footer-social" aria-label="Social Media">
+        <a class="social-icon" href="https://www.instagram.com/enricowendt387/" rel="me noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm11 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a>
+        <a class="social-icon" href="https://www.facebook.com/share/1b2mqhSLFA/" rel="me noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3 0-5 2-5 5v2H6v4h3v7h4v-7h3.2l.8-4H13V9c0-.7.3-1 1-1Z"/></svg></a>
+      </div>
+      <a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a>
+    </div>
   </div>
 </footer>
 

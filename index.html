@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Enrico Wendt Seesen | Stadtrat & Kreistag Goslar – SPD</title>
+  <title>Enrico Wendt | Stadtrat Seesen & Kreistag Goslar | SPD</title>
   <meta name="description" content="Enrico Wendt kandidiert für den Stadtrat Seesen und den Kreistag Goslar. Sozialpädagoge, Frühförderer und SPD-Kandidat für Seesen und den Landkreis Goslar.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -15,10 +15,10 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Enrico Wendt">
   <meta property="og:locale" content="de_DE">
-  <meta property="og:title" content="Enrico Wendt Seesen – Stadtrat & Kreistag Goslar">
+  <meta property="og:title" content="Enrico Wendt – Stadtrat Seesen & Kreistag Goslar">
   <meta property="og:description" content="Enrico Wendt kandidiert für den Stadtrat Seesen und den Kreistag Goslar. Themen, Haltung und Kontakt.">
   <meta property="og:url" content="https://enrico-wendt.de/">
-  <meta property="og:image" content="https://enrico-wendt.de/assets/enrico-wendt-seesen.jpg">
+  <meta property="og:image" content="https://enrico-wendt.de/assets/enrico-wendt-seesen-portrait.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <style>
@@ -78,7 +78,9 @@
     .hero-video-panel{position:relative;display:grid;place-items:center;overflow:hidden;background:#e8e8e8}
     .hero-video-panel::before{content:"";position:absolute;inset:0;background:url("assets/video-poster.jpg") center/cover no-repeat;opacity:.14;filter:blur(12px);transform:scale(1.06)}
     .hero-video-panel video{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;object-position:center;background:#ececec}
-    .hero-control{position:absolute;z-index:4;right:16px;bottom:16px;width:48px;height:48px;border:1px solid rgba(0,0,0,.25);border-radius:50%;background:rgba(255,255,255,.88);color:#111;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(7px);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+    .hero-controls{position:absolute;z-index:4;right:16px;bottom:16px;display:flex;gap:8px}
+    .hero-control{width:48px;height:48px;border:1px solid rgba(0,0,0,.25);border-radius:50%;background:rgba(255,255,255,.9);color:#111;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(7px);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+    .hero-control:hover,.hero-control:focus-visible{background:#fff}
     .hero-control svg{width:20px;height:20px;fill:currentColor}
 
     .election{padding:34px 0 74px}
@@ -106,7 +108,7 @@
     .theme-copy p{margin:0 0 12px}
     .theme-copy p:last-child{margin-bottom:0}
     .theme-strong{font-weight:800;border-left:4px solid var(--red);padding-left:14px}
-    .villages{font-size:.88rem;color:#555;margin-top:14px!important}
+    .villages{font-size:.96rem;color:#444;margin-top:18px!important;padding-top:14px;border-top:1px solid #c6c6c6;line-height:1.7}
     .idea-label{display:block;margin:18px 0 7px;color:var(--red-dark);font-size:.73rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
     .idea-list{margin:0;padding:0;list-style:none;border-top:1px solid #bbb}
     .idea-list li{position:relative;padding:10px 0 10px 20px;border-bottom:1px solid #d2d2d2;font-weight:700}
@@ -178,7 +180,7 @@
       .hero-copy{padding:32px 22px 28px}
       h1{font-size:3.6rem}
       .hero-copy p{font-size:1.08rem}
-      .hero-control{width:44px;height:44px;right:12px;bottom:12px}
+      .hero-controls{right:12px;bottom:12px}.hero-control{width:44px;height:44px}
       .election{padding-bottom:58px}.election-grid{gap:12px}.election-card{padding:24px;min-height:135px}.list-place strong{font-size:4.6rem}
       .intro{padding-bottom:58px}
       section.content{padding:60px 0}
@@ -205,10 +207,10 @@
         "@type":"WebPage",
         "@id":"https://enrico-wendt.de/#webpage",
         "url":"https://enrico-wendt.de/",
-        "name":"Enrico Wendt Seesen | Stadtrat & Kreistag Goslar – SPD",
+        "name":"Enrico Wendt | Stadtrat Seesen & Kreistag Goslar | SPD",
         "isPartOf":{"@id":"https://enrico-wendt.de/#website"},
         "about":{"@id":"https://enrico-wendt.de/#enrico-wendt"},
-        "primaryImageOfPage":{"@type":"ImageObject","url":"https://enrico-wendt.de/assets/enrico-wendt-seesen.jpg"},
+        "primaryImageOfPage":{"@type":"ImageObject","url":"https://enrico-wendt.de/assets/enrico-wendt-seesen-portrait.jpg"},
         "inLanguage":"de-DE"
       },
       {
@@ -269,9 +271,14 @@
           <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video-poster.jpg">
             <source src="assets/videos/enrico-wendt-seesen.mp4" type="video/mp4">
           </video>
-          <button class="hero-control" id="sound-button" type="button" aria-label="Ton einschalten" title="Ton an / aus">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.6.4-1.4 1.4c.6.7.9 1.4.9 2.2s-.3 1.5-.9 2.2l1.4 1.4c1-1 1.5-2.2 1.5-3.6s-.5-2.6-1.5-3.6Zm2.8-2.8L18 8c1.4 1.4 2.1 3 2.1 5S19.4 16.6 18 18l1.4 1.4c1.8-1.8 2.7-3.9 2.7-6.4s-.9-4.6-2.7-6.4ZM2.7 3.3 1.3 4.7l18 18 1.4-1.4-18-18Z"/></svg>
-          </button>
+          <div class="hero-controls" aria-label="Videosteuerung">
+            <button class="hero-control" id="play-button" type="button" aria-label="Video pausieren" title="Video abspielen / pausieren">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7V5Zm6 0h4v14h-4V5Z"/></svg>
+            </button>
+            <button class="hero-control" id="sound-button" type="button" aria-label="Ton einschalten" title="Ton an / aus">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.6.4-1.4 1.4c.6.7.9 1.4.9 2.2s-.3 1.5-.9 2.2l1.4 1.4c1-1 1.5-2.2 1.5-3.6s-.5-2.6-1.5-3.6Zm2.8-2.8L18 8c1.4 1.4 2.1 3 2.1 5S19.4 16.6 18 18l1.4 1.4c1.8-1.8 2.7-3.9 2.7-6.4s-.9-4.6-2.7-6.4ZM2.7 3.3 1.3 4.7l18 18 1.4-1.4-18-18Z"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -307,7 +314,7 @@
         <article class="theme">
           <h3>Dorfentwicklung: Ideen aus den Ortschaften möglich machen.</h3>
           <div class="theme-copy">
-            <p>Der Dorfentwicklungsplan für die neun Seesener Ortschaften wird derzeit erarbeitet. Am 21. August 2026 habe ich mich bei einer weiteren Veranstaltung über den aktuellen Stand informiert. Gerade jetzt ist wichtig, dass Ideen aus den Ortschaften in den Prozess einfließen.</p>
+            <p>Der Dorfentwicklungsplan für die neun Seesener Ortschaften wird derzeit gemeinsam mit den Bürgerinnen und Bürgern erarbeitet. Damit er zu den Ortschaften passt, müssen ihre Ideen und Vorschläge in den Prozess einfließen.</p>
             <p class="theme-strong">Fördermöglichkeiten sollen dort ankommen, wo aus Ideen konkrete Projekte werden. Ich möchte dazu beitragen, dass Vereine, Initiativen und private Eigentümerinnen und Eigentümer früh erfahren, welche Unterstützung möglich ist und an wen sie sich wenden können.</p>
             <span class="idea-label">Was ich konkret wichtig finde</span>
             <ul class="idea-list">
@@ -315,17 +322,17 @@
               <li>Förderwissen verständlich weitergeben und Menschen früh bei der Suche nach passenden Programmen und Ansprechpartnern unterstützen.</li>
             </ul>
             <div class="current-note"><strong>Aktuell:</strong> Kleinstprojekte können in Seesen bis zum 30. September 2026 eingereicht werden. Je Vorhaben sind bis zu 2.500&nbsp;Euro Zuschuss möglich. Für solche Kleinstvorhaben sind je Dorfregion über die Programmlaufzeit insgesamt bis zu 30.000&nbsp;Euro Zuschuss vorgesehen.</div>
-            <p class="villages">Dorfregion: Bilderlahe · Bornhausen · Engelade · Herrhausen · Ildehausen · Kirchberg · Mechtshausen · Münchehof · Rhüden</p>
+            <p class="villages"><strong>Die neun Ortschaften der Dorfregion:</strong><br>Bilderlahe · Bornhausen · Engelade · Herrhausen · Ildehausen · Kirchberg · Mechtshausen · Münchehof · Rhüden</p>
           </div>
         </article>
 
         <article class="theme">
           <h3>Mobilität und Älterwerden: verlässlich unterwegs bleiben.</h3>
           <div class="theme-copy">
-            <p>Der soziale Fahrdienst der SPD-Abteilung Bornhausen zeigt, wie viel ehrenamtliches Engagement bewirken kann. Solche Angebote sind ein wichtiger Baustein. Gleichzeitig brauchen ältere Menschen verlässliche Möglichkeiten, Arzttermine, Einkauf und soziale Kontakte auch dann zu erreichen, wenn Familie, Nachbarn oder Ehrenamtliche einmal nicht helfen können.</p>
+            <p>Der soziale Fahrdienst der SPD-Abteilung Bornhausen zeigt, wie viel ehrenamtliches Engagement leisten kann. Gleichzeitig brauchen ältere Menschen verlässliche öffentliche Angebote, um Arzttermine, Einkauf und soziale Kontakte auch ohne eigenes Auto erreichen zu können. <strong>flexo</strong> ist dafür bereits ein wichtiger Baustein.</p>
             <span class="idea-label">Was ich konkret wichtig finde</span>
             <ul class="idea-list">
-              <li>flexo und andere öffentliche Angebote konsequent aus Sicht der Ortschaften und älterer Menschen weiterentwickeln.</li>
+              <li>Prüfen, wie <strong>flexo</strong>, weitere Fahrangebote und neue Lösungen für die Ortschaften sinnvoll zusammenspielen können.</li>
               <li>Ein Dorf-Carsharing mit zentralem Ladepunkt als Pilot prüfen – lieber ein Modell, das funktioniert, als viele halbfertige Ideen.</li>
             </ul>
           </div>
@@ -346,7 +353,7 @@
         <article class="theme">
           <h3>Klimaanpassung konkret: Hitzeschutz, der funktioniert.</h3>
           <div class="theme-copy">
-            <p>Kinder sollen auch im Sommer lernen können. Beschäftigte in Kitas und Pflegeeinrichtungen müssen ihre Arbeit während längerer Hitzeperioden unter vernünftigen Bedingungen leisten können. Ältere und pflegebedürftige Menschen brauchen besonderen Schutz.</p>
+            <p>Kinder sollen auch im Sommer lernen können. Beschäftigte in Kitas und Pflegeeinrichtungen brauchen sichere Arbeitsbedingungen während Hitzeperioden. Ältere und pflegebedürftige Menschen brauchen besonderen Schutz.</p>
             <p class="theme-strong">Sonnenschutz und Lüftung sind wichtig. Wo sie nicht ausreichen, braucht es wirksame technische Kühlung. Klimaanlagen gehören für mich ausdrücklich dazu.</p>
             <span class="idea-label">Was ich konkret wichtig finde</span>
             <ul class="idea-list">
@@ -360,7 +367,7 @@
           <h3>Erneuerbare Energie: Wertschöpfung in der Region halten.</h3>
           <div class="theme-copy">
             <p>Wenn in Seesen Flächen für Wind- oder Solarenergie genutzt werden, sollte die Region wirtschaftlich möglichst stark davon profitieren. Es geht nicht nur um Strom, sondern auch um Aufträge, Einnahmen, Beteiligung und Arbeitsplätze.</p>
-            <p class="theme-strong">Bei neuen größeren Projekten sollte früh geprüft werden, wie kommunale, genossenschaftliche oder andere regionale Beteiligungsmodelle möglich sind – und was davon dauerhaft in Seesen und im Landkreis bleibt.</p>
+            <p class="theme-strong">Bei neuen größeren Projekten sollte früh geprüft werden, wie kommunale, genossenschaftliche oder andere regionale Beteiligungsmodelle möglich sind. Entscheidend ist: Was davon bleibt dauerhaft in Seesen und im Landkreis?</p>
             <span class="idea-label">Was ich konkret wichtig finde</span>
             <ul class="idea-list">
               <li>Regionale Beteiligungsmodelle ernsthaft mitprüfen, bevor ein Projekt vollständig außerhalb der Region organisiert wird.</li>
@@ -368,7 +375,7 @@
             </ul>
           </div>
         </article>
-      </div>      </div>
+      </div>
     </div>
   </section>
 
@@ -491,16 +498,27 @@
   (() => {
     const video = document.getElementById('hero-video');
     const sound = document.getElementById('sound-button');
-    if (!video || !sound) return;
+    const play = document.getElementById('play-button');
+    if (!video || !sound || !play) return;
     const mutedSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.6.4-1.4 1.4c.6.7.9 1.4.9 2.2s-.3 1.5-.9 2.2l1.4 1.4c1-1 1.5-2.2 1.5-3.6s-.5-2.6-1.5-3.6Zm2.8-2.8L18 8c1.4 1.4 2.1 3 2.1 5S19.4 16.6 18 18l1.4 1.4c1.8-1.8 2.7-3.9 2.7-6.4s-.9-4.6-2.7-6.4ZM2.7 3.3 1.3 4.7l18 18 1.4-1.4-18-18Z"/></svg>';
     const soundSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm11.5 3c0-1.2-.5-2.3-1.4-3.1v6.2c.9-.8 1.4-1.9 1.4-3.1Zm2.5 0c0 2-.9 3.8-2.3 5l1.4 1.4A8.1 8.1 0 0 0 20 12a8.1 8.1 0 0 0-2.9-6.4L15.7 7A6.1 6.1 0 0 1 18 12Z"/></svg>';
+    const pauseSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7V5Zm6 0h4v14h-4V5Z"/></svg>';
+    const playSvg = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7L8 5Z"/></svg>';
     const update = () => {
       sound.innerHTML = video.muted ? mutedSvg : soundSvg;
       sound.setAttribute('aria-label', video.muted ? 'Ton einschalten' : 'Ton ausschalten');
+      play.innerHTML = video.paused ? playSvg : pauseSvg;
+      play.setAttribute('aria-label', video.paused ? 'Video abspielen' : 'Video pausieren');
     };
-    sound.addEventListener('click', () => { video.muted = !video.muted; update(); if (video.paused) video.play().catch(()=>{}); });
-    update();
+    sound.addEventListener('click', () => { video.muted = !video.muted; update(); });
+    play.addEventListener('click', () => {
+      if (video.paused) video.play().catch(()=>{}); else video.pause();
+      update();
+    });
+    video.addEventListener('play', update);
+    video.addEventListener('pause', update);
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { video.autoplay = false; video.pause(); }
+    update();
   })();
 </script>
 </body>

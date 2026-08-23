@@ -121,7 +121,10 @@
     .hundred h2{font-size:clamp(2.35rem,5vw,4.7rem);font-weight:900;max-width:12ch;margin-bottom:20px}
     .hundred-copy{font-size:1.06rem;max-width:60ch;color:#333}
     .hundred-list{margin:0;padding:0;list-style:none;border-top:1px solid #171717}
-    .hundred-list li{padding:16px 0;border-bottom:1px solid var(--line);font-weight:900}
+    .hundred-list li{display:grid;grid-template-columns:minmax(190px,.9fr) 1.1fr;gap:22px;padding:17px 0;border-bottom:1px solid var(--line);align-items:start}
+    .hundred-list li strong{font-weight:900;line-height:1.3}
+    .hundred-list li span{position:relative;padding-left:22px;color:#444;font-weight:600;line-height:1.45}
+    .hundred-list li span::before{content:"→";position:absolute;left:0;color:var(--red);font-weight:900}
     .hundred-detail{font-size:1.04rem;color:#333;max-width:63ch}
     .hundred-detail p{margin:0 0 14px}
 
@@ -170,6 +173,7 @@
       .section-head,.intro-grid{gap:12px}
       .theme{grid-template-columns:1fr;gap:12px}
       .hundred-box{gap:32px}
+      .hundred-list li{grid-template-columns:1fr;gap:7px}
       .about-grid{gap:32px}
       .about img{max-width:560px}
     }
@@ -387,15 +391,15 @@
       </div>
       <div class="hundred-box">
         <ul class="hundred-list" aria-label="Gesprächsschwerpunkte in den ersten 100 Tagen">
-          <li>Kitas & Frühförderung</li>
-          <li>Pflege & soziale Dienste</li>
-          <li>Vereine & Ehrenamt</li>
-          <li>Menschen in den Ortschaften</li>
+          <li><strong>Kitas & Einrichtungen der Eingliederungshilfe</strong><span>mit Beschäftigten und Einrichtungen über ihren Alltag, Teilhabe und die Bedingungen guter Betreuung sprechen</span></li>
+          <li><strong>Pflege & soziale Dienste</strong><span>hören, wo Versorgung funktioniert und wo Unterstützung fehlt</span></li>
+          <li><strong>Vereine & Ehrenamt</strong><span>erfahren, was Engagement erleichtert und wo unnötige Hürden bestehen</span></li>
+          <li><strong>Menschen in den Ortschaften</strong><span>Anliegen vor Ort aufnehmen und unterschiedliche Perspektiven kennenlernen</span></li>
         </ul>
         <div class="hundred-detail">
-          <p>Unternehmen gehören zu einem starken Landkreis. Genauso wichtig ist mir, soziale Einrichtungen, Pflegekräfte, Vereine, Ehrenamtliche und Menschen in unseren Ortschaften kennenzulernen und ihre Erfahrungen aufzunehmen.</p>
-          <p>In den ersten 100 Tagen möchte ich deshalb bewusst vor Ort zuhören: Was funktioniert? Wo fehlt Unterstützung? Welche Entscheidungen des Landkreises kommen im Alltag an – und wo müssen wir besser werden?</p>
-          <p><strong>Mein Ziel:</strong> Anliegen aufnehmen, Zuständigkeiten klären und transparent machen, welche Themen ich weiterverfolge.</p>
+          <p>In meinen ersten 100 Tagen möchte ich bewusst dorthin gehen, wo Entscheidungen des Landkreises im Alltag ankommen. Diese vier Bereiche stehen für mich dabei besonders im Mittelpunkt.</p>
+          <p>Ein starker Landkreis braucht erfolgreiche Unternehmen ebenso wie gute soziale Strukturen und engagierte Menschen. Deshalb möchte ich nicht nur über Einrichtungen und Ortschaften sprechen, sondern mit den Menschen, die dort leben und arbeiten.</p>
+          <p><strong>Mein Ziel:</strong> zuhören, Anliegen aufnehmen, Zuständigkeiten klären und anschließend nachvollziehbar machen, welche Themen ich im Kreistag weiterverfolge.</p>
         </div>
       </div>
     </div>
